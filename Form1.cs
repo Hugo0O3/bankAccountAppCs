@@ -16,9 +16,15 @@ namespace BankAccountsApp
             bankAccount2.AccountNumber = Guid.NewGuid();
             bankAccount2.Balance = 350;
 
+            BankAccount bankAccount3 = new BankAccount();
+            bankAccount3.Owner = "Test";
+            bankAccount3.AccountNumber = Guid.NewGuid();
+            bankAccount3.Balance = 400;
+
             List<BankAccount> bankAccounts = new List<BankAccount>();
             bankAccounts.Add(bankAccount);
             bankAccounts.Add(bankAccount2);
+            bankAccounts.Add(bankAccount3);
 
             BankAccountsGrid.DataSource = bankAccounts;
         }
